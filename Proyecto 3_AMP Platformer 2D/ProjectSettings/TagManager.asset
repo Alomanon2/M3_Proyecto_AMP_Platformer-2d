@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Destroyer
+  - Enemy
+  - Coin
+  - Collectible
+  - SpawnStart
+  - Heart
+  - EndLevel
+  - EndGame
+  - PowerUpShoot
+  - BOSS
+  - Bullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Invisibles
+    uniqueID: 3790437497
+    locked: 0
+  - name: Background
+    uniqueID: 2242982821
+    locked: 0
+  - name: Grid
+    uniqueID: 3223335227
+    locked: 0
+  - name: Characters
+    uniqueID: 4169759259
+    locked: 0
+  - name: Items
+    uniqueID: 3869301257
+    locked: 0
