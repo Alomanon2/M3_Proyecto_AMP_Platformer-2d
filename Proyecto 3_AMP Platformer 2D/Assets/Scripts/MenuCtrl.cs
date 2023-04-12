@@ -98,7 +98,7 @@ public class MenuCtrl : MonoBehaviour
     public void GameOver()
     {
 
-        print(countScene);
+        //print(countScene);
         panelGameOver.SetActive(true);
         Time.timeScale = 0f;
 
