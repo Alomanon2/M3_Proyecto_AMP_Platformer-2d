@@ -11,7 +11,6 @@ public class MenuCtrl : MonoBehaviour
     public int countScene =0;
     public Animator transitionAnimator;
 
-    private bool gameOver, gameFinished;
     private float timer;
 
     public PlayerHealth playerHealth;
@@ -19,8 +18,6 @@ public class MenuCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameOver = false;
-        gameFinished = false;
 
         panelGame.SetActive(false);
         panelIntro.SetActive(true);
@@ -57,6 +54,7 @@ public class MenuCtrl : MonoBehaviour
 
     public void StartGame()
     {
+        timer = 0f;
         mainCameraScene0.SetActive(false); 
         panelGame.SetActive(true);
         Time.timeScale = 1f;

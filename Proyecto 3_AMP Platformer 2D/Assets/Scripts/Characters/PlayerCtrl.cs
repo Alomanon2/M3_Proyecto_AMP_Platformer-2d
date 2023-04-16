@@ -61,14 +61,14 @@ public class PlayerCtrl : MonoBehaviour
     private void Jump()
     {
         //Regular Jump
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump")) //Mathf.Abs(playerRB.velocity.y) < 3f &&  //Prevent from jumping when touching wall, but it also prevents from jumpin on slide
         {
             playerRB.AddForce(new Vector2(playerRB.velocity.x, jumpForce), ForceMode2D.Impulse);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision) 
     {
-        if(collision.gameObject.tag == "Destroyer")
+        if(collision.gameObject.CompareTag("Destroyer"))
         {
             player.transform.position = playerSpawn.transform.position;
             // Add falling animation / sound
@@ -77,14 +77,14 @@ public class PlayerCtrl : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
         }
@@ -131,12 +131,12 @@ public class PlayerCtrl : MonoBehaviour
         //Running Jump +15%
         if(Input.GetKeyDown(KeyCode.RightShift) && playerRB.velocity.x != 0)
         {
-            jumpForce = jumpForce * 1.15f;
+            jumpForce *= 1.15f;
             //isRunning = true; //Not needed.
         }
         if (Input.GetKeyUp(KeyCode.RightShift) && playerRB.velocity.x != 0)
         {
-            jumpForce = jumpForce / 1.15f;
+            jumpForce /= 1.15f;
             isRunning = false;
         }
         

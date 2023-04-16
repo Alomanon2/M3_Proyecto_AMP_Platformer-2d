@@ -10,7 +10,7 @@ public class HeartCtrl : MonoBehaviour
     private GameObject heart;
     private Vector3 initialPosition;
     private int direction = 1; // Starts moving up. Indicates movement orientation, depends on range
-    private float moveRange = 0.05f, movSpeed = 0.12f;
+    private float moveRange = 0.08f, movSpeed = 0.12f;
 
     // Start is called before the first frame update
     void Start()
